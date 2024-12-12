@@ -1,0 +1,20 @@
+
+---
+
+### `live_video_color_detector/README.md`
+
+```markdown
+# Live Video Color Detector
+
+This program captures a live video feed from the webcam and displays the RGB color values of the pixel under the mouse pointer in real-time. It can be helpful for color analysis in live video applications.
+
+## How It Works
+1. Open a video feed from your default webcam.
+2. As you move the mouse over the video feed, the RGB color values of the pixel under the pointer are displayed on the screen.
+3. To close the program, press `q` on your keyboard.
+
+## Instructions
+1. Open a terminal and navigate to the `live_video_color_detector` folder.
+2. Run the script with the following command:
+   ```bash
+   python live_color_detector.py

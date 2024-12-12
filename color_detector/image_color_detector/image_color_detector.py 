@@ -1,0 +1,36 @@
+import cv2
+import numpy as np
+
+# Function to format RGB values into a string
+def get_color_name(b, g, r):
+    return f"R={r}, G={g}, B={b}"
+
+# Mouse event handler to display color on click
+def show_color_on_click(event, x, y, flags, param):
+    if event == cv2.EVENT_LBUTTONDOWN:  # Check if the left mouse button was clicked
+        # Get the RGB color at the clicked (x, y) position
+        b, g, r = image[y, x]
+        color_text = get_color_name(b, g, r)
+        
+        # Copy the image and overlay the color text at the click position
+        display_image = image.copy()
+        cv2.putText(display_image, color_text, (x, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
+        cv2.imshow('Image Color Detector', display_image)
+
+# Load the image
+image = cv2.imread('example_image.jpg')  # Replace with your image file
+
+# Create a window and set up a callback for mouse clicks
+cv2.namedWindow('Image Color Detector')
+cv2.setMouseCallback('Image Color Detector', show_color_on_click)
+
+# Display the image and wait for user input
+while True:
+    cv2.imshow('Image Color Detector', image)
+
+    # Press 'q' to quit
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+# Close the display window
+cv2.destroyAllWindows()

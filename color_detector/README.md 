@@ -1,0 +1,16 @@
+# Color Detector Project
+
+This project provides two Python programs to detect colors:
+1. **Live Video Color Detector** - Detects the color of any pixel in a live video feed from your webcam.
+2. **Image Color Detector** - Detects the color of any pixel in a static image upon clicking.
+
+## Folder Structure
+- `live_video_color_detector/` - Contains the code and documentation for detecting colors in a live video feed.
+- `image_color_detector/` - Contains the code, an example image, and documentation for detecting colors in a static image.
+- `requirements.txt` - Lists the dependencies to run the project.
+
+## Setup
+
+Install dependencies:
+```bash
+pip install -r requirements.txt
