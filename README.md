@@ -1,6 +1,5 @@
 # FriedrichFaceBlend
 
-Here's a more detailed and comprehensive `README.md` for your project:
 
 ```markdown
 # Face Blending into Friedrich's Painting
